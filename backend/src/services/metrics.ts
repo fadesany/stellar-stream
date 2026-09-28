@@ -79,3 +79,9 @@ export const indexerOutcome = new Gauge({
   help: "Indexer monitoring health: 0=success, 1=transient_delay, 2=blocked",
   registers: [register],
 });
+
+export const authFailuresTotal = new Counter({
+  name: "auth_failures_total",
+  help: "Total number of authentication failures (invalid/expired tokens, verification errors)",
+  registers: [register],
+});
