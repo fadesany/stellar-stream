@@ -80,8 +80,8 @@ export const indexerOutcome = new Gauge({
   registers: [register],
 });
 
-export const authFailuresTotal = new Counter({
-  name: "auth_failures_total",
-  help: "Total number of authentication failures (invalid/expired tokens, verification errors)",
+export const sqliteRestoreOutcome = new Gauge({
+  name: "sqlite_restore_outcome",
+  help: "SQLite restore schema check outcome at startup: 0=success, 1=transient_delay, 2=blocked",
   registers: [register],
 });
